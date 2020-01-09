@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D2CFA62-AB38-4978-A74B-7CE8E7CB0B53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Textile_Asia</RootNamespace>
+    <AssemblyName>Textile Asia</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>D:\Bunifu\InnerVisual-Bunifu_UI_v1.5.3 Crack\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.3.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.3.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.3.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.3.0\lib\net45\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Graph, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Companies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Companies.Designer.cs">
+      <DependentUpon>Companies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Countries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Countries.Designer.cs">
+      <DependentUpon>Countries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Countries_Desc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Countries_Desc.Designer.cs">
+      <DependentUpon>Countries_Desc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desc22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desc22.Designer.cs">
+      <DependentUpon>Desc22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Details.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exportform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exportform.Designer.cs">
+      <DependentUpon>Exportform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gallery.Designer.cs">
+      <DependentUpon>Gallery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Hall.Designer.cs">
+      <DependentUpon>Hall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hall_desc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hall_desc.Designer.cs">
+      <DependentUpon>Hall_desc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desc.Designer.cs">
+      <DependentUpon>Desc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupForm.Designer.cs">
+      <DependentUpon>PopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product_desc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product_desc.Designer.cs">
+      <DependentUpon>Product_desc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stalls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stalls.Designer.cs">
+      <DependentUpon>Stalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stall_desc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stall_desc.Designer.cs">
+      <DependentUpon>Stall_desc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workbook.cs" />
+    <Compile Include="Worksheet.cs" />
+    <EmbeddedResource Include="Companies.resx">
+      <DependentUpon>Companies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Countries.resx">
+      <DependentUpon>Countries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Countries_Desc.resx">
+      <DependentUpon>Countries_Desc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desc22.resx">
+      <DependentUpon>Desc22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details.resx">
+      <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exportform.resx">
+      <DependentUpon>Exportform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gallery.resx">
+      <DependentUpon>Gallery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hall.resx">
+      <DependentUpon>Hall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hall_desc.resx">
+      <DependentUpon>Hall_desc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desc.resx">
+      <DependentUpon>Desc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupForm.resx">
+      <DependentUpon>PopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_desc.resx">
+      <DependentUpon>Product_desc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Stalls.resx">
+      <DependentUpon>Stalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stall_desc.resx">
+      <DependentUpon>Stall_desc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-handshake-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conference-filled-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-collaborator-male-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-share-filled-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-filled-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-schedule-filled-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-floor-plan-filled-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-about-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-filled-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-filled-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-filled-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-event-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-event-filled-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-handshake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conference-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lecturer-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lecturer-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-share-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-floor-plan-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-about-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-share-filled-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-event-filled-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conference-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-globe-filled-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-globe-filled-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-survey-filled-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-survey-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-marker-filled-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-error-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-error-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-error-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-filled-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\W3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Textile-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-filled-circle-filled-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Se.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foodg.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
